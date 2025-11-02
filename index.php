@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Othkodylinz — Portofolio</title>
+  <meta name="description" content="Portofolio Othkodylinz — wedding, graduation, dan personal photo/video. Simple tapi WOW." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { jakarta: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: { 500:'#5e6ef5', 600:'#3e4ff0' } },
+          boxShadow: { glow:'0 0 40px 10px rgb(94 110 245 / 0.08)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    .grain:before{content:"";position:fixed;inset:-40%;background-image:url('data:image/svg+xml;utf8,<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity=".04"/></svg>');pointer-events:none;mix-blend-mode:overlay}
+    .lift{transition:transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s}
+    .lift:hover{transform:translateY(-6px) scale(1.02); box-shadow:0 25px 60px -20px rgb(0 0 0 / .5)}
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
+    });
+  </script>
+</head>
+<body class="bg-black text-white font-jakarta antialiased grain relative">
+  <div aria-hidden class="pointer-events-none fixed -top-36 -left-24 h-[36rem] w-[36rem] rounded-full bg-brand-600/20 blur-3xl"></div>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-black/50 border-b border-white/5">
+    <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="text-xl font-extrabold tracking-tight">Othkodylinz</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-white/80">
+        <a href="#work" class="hover:text-white">Portofolio</a>
+        <a href="#contact" class="hover:text-white">Kontak</a>
+      </nav>
+      <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-white text-black px-4 py-2 text-sm font-semibold hover:bg-brand-500/10 hover:text-white border border-white/10 transition shadow-glow">Booking</a>
+    </div>
+  </header>
+
+  <!-- HERO (ringkas) -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <p class="text-xs uppercase tracking-widest text-white/60 mb-3">Wedding • Graduation • Personal</p>
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Simple look. <span class="bg-gradient-to-r from-white via-brand-500 to-white bg-clip-text text-transparent">WOW</span> feel.</h1>
+        <p class="mt-4 text-white/70 max-w-xl">Clean framing, true skin tone, and honest moments. Portofolio pilihan kami di bawah.</p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <a href="#work" class="rounded-full border border-white/15 px-5 py-2.5 hover:bg-white hover:text-black transition">Lihat Portofolio</a>
+          <a href="#contact" class="rounded-full bg-white text-black px-5 py-2.5 font-semibold hover:bg-brand-500/10 hover:text-white border border-white/10 transition">Hubungi Kami</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/15 lift">
+          <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?q=80&w=1200&auto=format&fit=crop" alt="Wedding portrait" class="h-full w-full object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO GRID SAJA -->
+  <section id="work" class="mx-auto max-w-7xl px-6 pb-6 pt-2">
+    <div class="flex items-end justify-between gap-6 mb-8">
+      <div>
+        <h2 class="text-2xl md:text-4xl font-extrabold">Portofolio Pilihan</h2>
+        <p class="text-white/60 mt-2 max-w-2xl">Ganti semua gambar dummy dengan karya asli (drag & drop di editor atau edit HTML). </p>
+      </div>
+      <a href="#contact" class="hidden md:inline-flex rounded-full border border-white/15 px-5 py-2.5 hover:bg-white hover:text-black transition">Diskusikan Konsep</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <article class="group lift rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?q=80&w=1200&auto=format&fit=crop" alt="Graduation" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy"/>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold">Graduation</h3>
+          <p class="text-sm text-white/60">Clean color • Sharp details</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="group lift rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1200&auto=format&fit=crop" alt="Portrait" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy"/>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold">Personal Portrait</h3>
+          <p class="text-sm text-white/60">Natural light • Minimal retouch</p>
+        </div>
+      </article>
+
+      <!-- Card 3 (Video thumb) -->
+      <article class="group lift rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+        <div class="aspect-[16/9] md:aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop" alt="Video highlight" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy"/>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold">Highlight Video</h3>
+          <p class="text-sm text-white/60">Steady • Cinematic</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="group lift rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop" alt="Couple" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy"/>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold">Pre‑Wedding</h3>
+          <p class="text-sm text-white/60">Elegant composition • Soft tones</p>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="group lift rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Product" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy"/>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold">Product</h3>
+          <p class="text-sm text-white/60">Crisp & consistent</p>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="group lift rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Wedding" class="h-full w-full object-cover group-hover:scale-105 transition duration-700" loading="lazy"/>
+        </div>
+        <div class="p-4">
+          <h3 class="font-semibold">Wedding</h3>
+          <p class="text-sm text-white/60">Storytelling • True skin tone</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER CTA pendek -->
+  <section id="contact" class="bg-white/5 border-t border-white/5">
+    <div class="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl md:text-4xl font-extrabold">Siap foto atau video?</h2>
+        <p class="text-white/70 mt-3">Sebutkan jenis sesi & tanggal. Kami balas cepat.</p>
+      </div>
+      <div class="md:justify-self-end">
+        <a href="https://wa.me/6280000000000" class="inline-flex items-center gap-2 rounded-full bg-white text-black px-6 py-3 text-base font-semibold hover:bg-brand-500/10 hover:text-white border border-white/10 transition">Chat WhatsApp</a>
+      </div>
+      <p class="col-span-full text-center text-xs text-white/50 mt-6">© <span data-year></span> Othkodylinz.</p>
+    </div>
+  </section>
+</body>
+</html>
